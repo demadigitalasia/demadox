@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo DEMA DOX">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0A1128"/>
+  <path d="M20 14h16l10 10v26a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z" fill="#FFFFFF"/>
+  <path d="M36 14v10h10" fill="#FF5C20"/>
+  <path d="M24 30h9.5c4.4 0 7.5 2.6 7.5 7s-3.1 7-7.5 7H24V30zm4.5 3.4v7.2h4.6c2.2 0 3.6-1.3 3.6-3.6s-1.4-3.6-3.6-3.6h-4.6z" fill="#0A1128"/>
+  <circle cx="45.5" cy="45.5" r="6.5" fill="#FF5C20"/>
+  <path d="M45.5 42.2v3.6l2.4 1.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

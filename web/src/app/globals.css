@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f1e7;
+  --foreground: #14121a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  /* DEMA DOX identity */
+  --color-ink: #0b0b12;
+  --color-navy: #0a1128;
+  --color-accent: #ff5c20;
+  --color-accent-deep: #d63f0a;
+  --color-violet: #7c5cff;
+  --color-paper: #f6f1e7;
+  --color-cream: #efe6d3;
+  --color-mint: #c9f24b;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0b12;
+    --foreground: #f4f1ea;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+/* ---- DEMA DOX utilities ---- */
+
+.text-gradient {
+  background: linear-gradient(92deg, #ff5c20 10%, #ff9a3d 45%, #7c5cff 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-grid-light {
+  background-image:
+    linear-gradient(to right, rgb(20 18 26 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(20 18 26 / 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.mesh-glow {
+  background:
+    radial-gradient(600px 320px at 15% 10%, rgb(255 92 32 / 0.35), transparent 60%),
+    radial-gradient(700px 380px at 85% 15%, rgb(124 92 255 / 0.4), transparent 60%),
+    radial-gradient(500px 300px at 50% 100%, rgb(255 92 32 / 0.12), transparent 60%);
+}
+
+.card-ring {
+  border: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow: 0 20px 60px -20px rgb(0 0 0 / 0.5);
+}
+
+@keyframes dema-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: dema-float 5s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: dema-float 7s ease-in-out infinite;
+}
+
+@keyframes dema-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: dema-marquee 28s linear infinite;
+}
+
+@keyframes dema-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: dema-blink 1.1s steps(1) infinite;
+}
+
+/* Fokus keyboard yang terlihat (a11y P1) */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #ff5c20;
+  outline-offset: 2px;
+}
